@@ -1,0 +1,34 @@
+option java_package = "com.lsy.model";
+option java_outer_classname = "OrderTrajPb";
+    
+message OrderTraj {        
+    optional string order_id = 1;  
+    optional string user_id = 2;
+    repeated map_match_point_pb point_list = 3;
+    optional int32 start_x = 4;
+    optional int32 start_y = 5;
+    optional int32 end_x = 6;
+    optional int32 end_y = 7;
+    optional int32 start_ts = 8;
+    optional int32 end_ts = 9;
+}
+
+message map_match_point_pb {
+     optional int32 proj_x = 1;
+     optional int32 proj_y = 2;
+     repeated int64 link_id_vec = 3;
+     required int32 link_pass_dist = 4;
+     required int32 timestamp = 5;
+     optional int32 src_x = 6;
+     optional int32 src_y = 7;
+     optional int32 biztype = 8;
+     optional int32 map_version = 9;
+     optional int32 bizstatus = 10;
+     optional bytes role = 17;
+     optional int32 certainty = 18;
+     optional int64 phone = 19;
+     optional float point_speed = 20;
+     optional float point_direction = 21;
+     optional float line_speed = 22;
+     optional float line_direction = 23;
+}

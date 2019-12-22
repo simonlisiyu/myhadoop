@@ -1,0 +1,46 @@
+cm:
+  defaultClusterName: cluster
+  server:
+    address: jiaotong.danao.test1
+    password: admin
+    port: 7180
+    username: admin
+
+
+logging:
+  level:
+    root: INFO
+    com:
+      lsy:
+        myhadoop:
+          cloudera: DEBUG
+    org.apache.cxf: INFO
+
+server:
+  compression:
+    enabled: true
+#  port: 8888
+  port: 8889
+
+spring:
+  application:
+    name: cloudera-api
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      wrap-root-value: false
+  servlet:
+    multipart:
+      maxFileSize: 500MB
+      maxRequestSize: 500MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: false
