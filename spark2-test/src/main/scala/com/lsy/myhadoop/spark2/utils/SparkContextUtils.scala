@@ -34,7 +34,7 @@ object SparkContextUtils {
     rdd.saveAsTextFile(path)
   }
 
-  // didi hbase bulkload
+  // lsy hbase bulkload
 //  def readTextFileBySc(sc:SparkContext, path:String, compression:String=""):RDD[String] = {
 //    val rdd:RDD[String] =
 //      if("lzo" == compression) sc.newAPIHadoopFile(path,

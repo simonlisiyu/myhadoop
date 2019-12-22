@@ -378,7 +378,7 @@ public final class TrajPb {
                 TrajPb.OrderTraj.class, TrajPb.OrderTraj.Builder.class);
       }
 
-      // Construct using com.didichuxing.sts.traj.core.model.TrajPb.OrderTraj.newBuilder()
+      // Construct using com.lsychuxing.sts.traj.core.model.TrajPb.OrderTraj.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1855,7 +1855,7 @@ public final class TrajPb {
                 TrajPb.map_match_point_pb.class, TrajPb.map_match_point_pb.Builder.class);
       }
 
-      // Construct using com.didichuxing.sts.traj.core.model.TrajPb.map_match_point_pb.newBuilder()
+      // Construct using com.lsychuxing.sts.traj.core.model.TrajPb.map_match_point_pb.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2850,7 +2850,7 @@ public final class TrajPb {
       "line_direction\030\014 \001(\002\022\021\n\tcertainty\030\r \001(\005\022" +
       "\017\n\007biztype\030\016 \001(\005\022\014\n\004role\030\017 \001(\014\022\023\n\013map_ve",
       "rsion\030\020 \001(\005\022\021\n\tbizstatus\030\021 \001(\005\022\r\n\005phone\030" +
-      "\022 \001(\003B-\n#com.didichuxing.sts.traj.core.m" +
+      "\022 \001(\003B-\n#com.lsychuxing.sts.traj.core.m" +
       "odelB\006TrajPb"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

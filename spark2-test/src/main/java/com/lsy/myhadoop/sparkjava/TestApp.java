@@ -7,7 +7,7 @@ import org.apache.spark.api.java.function.Function;
 
 public class TestApp {
     public static void main(String[] args) {
-        String logFile = "file:///Users/didi/ueProjects/hdfsfile1"; // Should be some file on your system
+        String logFile = "file:///Users/lsy/ueProjects/hdfsfile1"; // Should be some file on your system
         SparkConf conf = new SparkConf().setAppName("Simple Application");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> logData = sc.textFile(logFile).cache();

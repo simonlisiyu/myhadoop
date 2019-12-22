@@ -11,7 +11,7 @@
 //
 ///**
 //  * Created by lisiyu on 2018/5/9.
-//  * didi pom
+//  * lsy pom
 //<hbase.version>0.98.21-hadoop2-ddh-0.1.0</hbase.version>
 //  */
 //object HBaseBulkLoadUtils {

@@ -37,8 +37,8 @@ object SparkFutureIO {
     val sc = spark.sparkContext
 
     val dirs = Set(
-      "/Users/didi/Softwares/bigdata/data/test-data/ml-100k/u.user",
-      "/Users/didi/Softwares/bigdata/data/test-data/ml-100k/u.data")
+      "/Users/lsy/Softwares/bigdata/data/test-data/ml-100k/u.user",
+      "/Users/lsy/Softwares/bigdata/data/test-data/ml-100k/u.data")
 
     val executorService = Executors.newFixedThreadPool(3)
     val futures = dirs.map(dir => executorService.submit(new Callable[Long]() {

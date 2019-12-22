@@ -3314,8 +3314,8 @@ public final class OrderTrajPb {
       "tatus\030\n \001(\005\022\014\n\004role\030\021 \001(\014\022\021\n\tcertainty\030\022" +
       " \001(\005\022\r\n\005phone\030\023 \001(\003\022\023\n\013point_speed\030\024 \001(\002" +
       "\022\027\n\017point_direction\030\025 \001(\002\022\022\n\nline_speed\030" +
-      "\026 \001(\002\022\026\n\016line_direction\030\027 \001(\002B2\n#com.did" +
-      "ichuxing.sts.traj.core.modelB\013OrderTrajP" +
+      "\026 \001(\002\022\026\n\016line_direction\030\027 \001(\002B2\n#com." +
+      "sts.traj.core.modelB\013OrderTrajP" +
       "b"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
