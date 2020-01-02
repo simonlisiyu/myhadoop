@@ -13,6 +13,24 @@
         <version>2.1.0.RELEASE</version>
     </parent>
 
+    <developers>
+        <developer>
+            <name>lisiyu</name>
+            <email>otter202@gmail.com</email>
+            <roles>
+                <role>Project Manager</role>
+            </roles>
+            <organization>lisiyu</organization>
+            <organizationUrl>https://github.com/simonlisiyu</organizationUrl>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <comments>A business-friednly OSS license</comments>
+        </license>
+    </licenses>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
