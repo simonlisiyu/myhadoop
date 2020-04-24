@@ -46,7 +46,7 @@ public class EsImport {
             	System.out.println("splitFlag:"+splitFlag);
             	System.out.println(id);
             	System.out.println(body);
-                bulkRequest.add(client.prepareIndex(index, type).setSource(body));
+//                bulkRequest.add(client.prepareIndex(index, type).setSource(body));
                 bulkRequest.add(new UpdateRequest(index, type, id).doc(body).docAsUpsert(true));
                 //每一千条提交一次
                 if (count% 1000==0) {

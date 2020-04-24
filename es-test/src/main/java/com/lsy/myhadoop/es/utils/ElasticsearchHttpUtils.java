@@ -61,9 +61,6 @@ public class ElasticsearchHttpUtils {
      * @param timeKey   _updatetime
      * @param startTs   1560392323000
      * @param endTs     1560392323999
-     * @param from      0
-     * @param size      10
-     * @return
      * @throws IOException
      */
     public static JSONObject queryString(ElasticsearchHttpConfig config, String index, String param,

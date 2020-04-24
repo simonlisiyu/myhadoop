@@ -55,6 +55,8 @@
         <module>janus-test</module>
         <module>hadoop-test</module>
         <module>es-test</module>
+        <module>flink-test</module>
+        <module>hadoop-mp4-test</module>
     </modules>
 
     <packaging>pom</packaging>

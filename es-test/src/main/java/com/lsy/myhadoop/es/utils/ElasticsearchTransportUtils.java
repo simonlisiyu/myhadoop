@@ -6,8 +6,10 @@ import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.Client;
+import org.elasticsearch.common.unit.TimeValue;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.sort.SortOrder;
 import org.slf4j.Logger;
@@ -22,6 +24,34 @@ import java.util.Map;
  */
 public class ElasticsearchTransportUtils {
     private static final Logger LOG = LoggerFactory.getLogger(ElasticsearchTransportUtils.class);
+
+    public static  JSONArray queryMatchAll(Client client, String index, String type) {
+        LOG.info("enter ElasticsearchUtils.queryMatchAll().");
+        JSONArray array = new JSONArray();
+
+        SearchRequestBuilder builder = client.prepareSearch(index);
+        if (type != null) {
+            builder.setTypes(type);
+        }
+        builder.setQuery(QueryBuilders.matchAllQuery());
+        builder.setSize(10000);
+        builder.setScroll(new TimeValue(6000));
+        SearchResponse scrollResp = builder.execute().actionGet();
+
+        while (true) {    //循环get，直到所有结束
+            for (SearchHit hit : scrollResp.getHits().getHits()) {
+                String json = hit.getSourceAsString();
+                array.add(json);
+            }
+            scrollResp = client.prepareSearchScroll(scrollResp.getScrollId())
+                    .setScroll(new TimeValue(6000)).execute().actionGet();
+            if (scrollResp.getHits().getHits().length == 0) {
+                break;
+            }
+        }
+        LOG.info("success ElasticsearchUtils.queryMatchAll(). result="+array.size());
+        return array;
+    }
 
     /**
      * 通过id拿到结果

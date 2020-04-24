@@ -1,0 +1,7 @@
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://jiaotong.danao.test1:9000</value>
+        <description>HDFS的URI，文件系统://namenode标识:端口号</description>
+    </property>
+</configuration>

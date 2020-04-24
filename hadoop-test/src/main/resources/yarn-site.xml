@@ -1,0 +1,6 @@
+<configuration>
+    <property>
+        <name>yarn.resourcemanager.webapp.address</name>
+        <value>jiaotong.danao.test8:8099</value>
+    </property>
+</configuration>
