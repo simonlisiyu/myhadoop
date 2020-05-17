@@ -172,6 +172,12 @@
             <version>${jetty.version}</version>
         </dependency>
 
+        <!--es spark-->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-spark-20_2.11</artifactId>
+            <version>6.0.0</version>
+        </dependency>
 
     </dependencies>
 
